@@ -3,6 +3,7 @@
 @section('content')
 
             @include ('layouts.serviceform')
+
 			
 			@foreach ($services as $service)
 	            
@@ -13,5 +14,6 @@
 	            </div>
 
 	        @endforeach
+
     
 @endsection

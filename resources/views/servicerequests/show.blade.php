@@ -10,9 +10,9 @@
 
 			<div class="card-header text-center">
 
-				<h1>{{ $servicerequest->name }}</h1>
+				<h1>{{ $servicerequest->user->name}}</h1>
 
-				<h3>{{ $servicerequest->email }}</h3>
+				<h3>{{ $servicerequest->user->email}}</h3>
 
 				<h3>Created at: {{ $servicerequest->created_at }}</h3>
 

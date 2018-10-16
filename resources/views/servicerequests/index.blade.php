@@ -6,7 +6,7 @@
 
 	    	<li>
 
-	    		<a href="/service-requests/{{ $servicerequest->id }}">{{ $servicerequest->name }} at {{ $servicerequest->created_at->toDayDateTimeString() }}</a>
+	    		<a href="/service-requests/{{ $servicerequest->id }}">{{ $servicerequest->user->name}}  at {{ $servicerequest->created_at->toDayDateTimeString() }}</a>
 
 	    	</li>
 

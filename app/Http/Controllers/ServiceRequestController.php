@@ -32,26 +32,26 @@ class ServiceRequestController extends Controller
 
 
     public function store()
-    {
+    {   
 
         // Validate user input
 
         $this->validate(request(), [
-            'inputName' => 'required',
-            'inputEmail' => 'required|email',
-            'ClientMessage' => 'required'
-
+            'service' => 'required',
+            'message' => 'required'
         ]);
 
     	ServiceRequest::create([
 
-    			'name' => request('inputName'),
 
-    			'email' => request('inputEmail'),
+    			'service' => request('service'),
 
-    			'message' => request('ClientMessage')
+    			'message' => request('message'),
+
+                'user_id' => 1
 
     		]);
+
 
 
     	//Redirect to home page

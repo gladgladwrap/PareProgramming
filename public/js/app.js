@@ -13903,8 +13903,6 @@ window.Vue = __webpack_require__(36);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
 var app = new Vue({
   el: '#app'
 });
