@@ -30,4 +30,3 @@ Route::get('/service-requests/{servicerequest}', 'ServiceRequestController@show'
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

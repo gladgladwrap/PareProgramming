@@ -2,8 +2,6 @@
 
 @section('content')
 	
-	<a href="/service-requests">Back</a>
-
 	<div class="col-md-6 col-xs-8 mx-auto my-4">
 
 		<div class="card card-default">

@@ -6,8 +6,20 @@ use Illuminate\Http\Request;
 
 use App\ServiceRequest;
 
+use App\User;
+
 class ServiceRequestController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
 
     public function index()
@@ -48,7 +60,7 @@ class ServiceRequestController extends Controller
 
     			'message' => request('message'),
 
-                'user_id' => 1
+                'user_id' => auth()->id()
 
     		]);
 

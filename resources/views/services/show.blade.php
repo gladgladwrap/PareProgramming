@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-	
-	<a href="/">Back</a>
 
 	<div class="col-md-6 col-xs-8 mx-auto my-4">
 
