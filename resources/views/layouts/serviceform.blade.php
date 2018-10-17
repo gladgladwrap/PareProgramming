@@ -13,15 +13,15 @@
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">Services</label>
 
-      <select name="service" class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+      <select name="service_id" class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
 
         <option disabled selected value>Choose one of the following...</option>
 
-        <option value="webdev">Web Development</option>
-        <option value="design">Web Design</option>
-        <option value="small-claims">Small Claims Negotiation</option>
-        <option value="tutoring">Tutoring</option>
-        <option value="other">Other</option>
+        <option value="1">Web Development</option>
+        <option value="2">Web Design</option>
+        <option value="3">Small Claims Negotiation</option>
+        <option value="4">Tutoring</option>
+        <option value="5">Other</option>
 
       </select>
 

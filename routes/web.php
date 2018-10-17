@@ -28,5 +28,23 @@ Route::get('/service-requests/{servicerequest}', 'ServiceRequestController@show'
 
 
 
+// Routes to be made
+
+//This is only to be used by an administator
+//A regular user should only be able to see their own service requests
+Route::get('/service-requests/users/{user}', 'ServiceRequestController@filterByUser');
+
+
+//This is also only to be used by an admin
+// A regular user will only be able to see their specific requests, categorized by service
+
+Route::get('/service-requests/services/{service}', 'ServiceRequestController@services');
+
+
+
+
+
+
+// This is already complete
 Auth::routes();
 

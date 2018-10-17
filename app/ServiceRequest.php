@@ -10,7 +10,7 @@ class ServiceRequest extends Model
 {	
 
 	//use guarded to select the fields that we dont want to allow. It is the inverse of protected.
-    protected $fillable = ['service', 'message', 'user_id'];
+    protected $fillable = ['service_id', 'message', 'user_id'];
 
 
     public function user()

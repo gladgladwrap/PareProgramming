@@ -8,6 +8,8 @@ use App\ServiceRequest;
 
 use App\User;
 
+use App\Service;
+
 class ServiceRequestController extends Controller
 {
 
@@ -42,6 +44,25 @@ class ServiceRequestController extends Controller
     }
 
 
+    public function filterByUser(User $user)
+    {   
+
+        $user= User::find($user->id);
+
+        return view('servicerequests.showByUser', compact('user'));
+
+    }
+
+
+    public function services(Service $service)
+    {
+
+        $service = Service::find($service->id);
+
+        return view('servicerequests.showByService', compact('service'));
+    }
+
+
 
     public function store()
     {   
@@ -49,14 +70,14 @@ class ServiceRequestController extends Controller
         // Validate user input
 
         $this->validate(request(), [
-            'service' => 'required',
+            'service_id' => 'required',
             'message' => 'required'
         ]);
 
     	ServiceRequest::create([
 
 
-    			'service' => request('service'),
+    			'service_id' => request('service_id'),
 
     			'message' => request('message'),
 

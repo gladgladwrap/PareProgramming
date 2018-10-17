@@ -11,4 +11,9 @@ class Service extends Model
     {
     	return "Please pay me!";
     }
+
+    public function serviceRequests()
+    {
+    	return $this->hasMany(ServiceRequest::class);
+    }
 }
