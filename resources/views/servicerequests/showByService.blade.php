@@ -4,6 +4,10 @@
 	
 	<h1 class="text-center">{{ $service->title }} Requests</h1>
 
+	<p class="text-center">Click on a Service Request ID in order to see the details of a particular service request.</p>
+
+	<p class="text-center">Click on a client's name to see all of his or her Service Requests.</p>
+
 	<table class="table">
 
 		<thead class="text-center">
