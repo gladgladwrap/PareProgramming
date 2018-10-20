@@ -23,8 +23,10 @@
     <div id="app">
         @include ('layouts.nav')
 
-        <main class="py-4">
-            @yield('content')
+        <main class="container-fluid">
+
+                @yield('content')
+
         </main>
 
         @include ('layouts.footer')

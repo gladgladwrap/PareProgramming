@@ -10484,3 +10484,8 @@ a.text-dark:focus {
   margin: 0 auto;
 }
 
+.sidebar-archives {
+  background-color: #fff;
+  min-height: 100%;
+}
+

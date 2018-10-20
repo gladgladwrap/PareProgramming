@@ -46,5 +46,5 @@ Route::get('/service-requests/services/{service}', 'ServiceRequestController@ser
 
 
 // This is already complete
-Auth::routes();
+Auth::routes(['verify' => true]);
 

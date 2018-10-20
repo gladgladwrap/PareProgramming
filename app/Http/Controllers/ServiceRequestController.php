@@ -10,6 +10,9 @@ use App\User;
 
 use App\Service;
 
+use Carbon\Carbon;
+
+
 class ServiceRequestController extends Controller
 {
 
@@ -25,11 +28,26 @@ class ServiceRequestController extends Controller
     
 
     public function index()
-    {
+    {   
 
-    	$servicerequests= ServiceRequest::latest()->get();
+        $servicerequests = ServiceRequest::latest()
+        
+        ->filter(request(['month', 'year']))
+        
+        ->get();
 
-    	return view('servicerequests.index', compact('servicerequests'));
+        //temporary
+
+        $archives = ServiceRequest::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
+        ->groupBy('year', 'month')
+
+        ->orderByRaw('min(created_at) desc')
+
+        ->get()
+
+        ->toArray();
+
+    	return view('servicerequests.index', compact('servicerequests', 'archives'));
 
     }
 
