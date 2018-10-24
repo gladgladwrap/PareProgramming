@@ -5,7 +5,7 @@
 			@guest
 				<div class="text-center mb-4">
     
-			      @include ('layouts.hero-logo')
+			      <div id="logo"></div>
 
 			      <h1 class="h3 mb-3 font-weight-normal">Get In Touch With Us!</h1>
 			      

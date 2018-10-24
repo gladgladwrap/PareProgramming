@@ -24,3 +24,12 @@
 	background-color: #fff;
 	min-height:100%;
 }
+
+// SVG styling 
+	#logo {height:300px; width:140px; background: center no-repeat url('/svg/logo.svg'); margin:0 auto;}
+
+
+	#service-bg {
+		background: top / contain no-repeat url('/svg/WaterfallHangspace.svg');
+		height:100vh;
+	}

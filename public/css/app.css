@@ -10489,3 +10489,15 @@ a.text-dark:focus {
   min-height: 100%;
 }
 
+#logo {
+  height: 300px;
+  width: 140px;
+  background: center no-repeat url("/svg/logo.svg");
+  margin: 0 auto;
+}
+
+#service-bg {
+  background: top/contain no-repeat url("/svg/WaterfallHangspace.svg");
+  height: 100vh;
+}
+
