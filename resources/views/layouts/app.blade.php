@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name') }} Web Services</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,6 +38,9 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <meta name="description" content="We are dedicated to pairing together programmers in the hopes that they begin to practice pair programming. We also provide a variety of business services.">
+    <meta name="author" content="Dylan Cooper">
+
 </head>
 <body>
     <div id="app">
@@ -52,5 +55,22 @@
         @include ('layouts.footer')
         
     </div><!-- End of #app --> 
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Organization",
+  "name": "Pare Programming",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "50 main Street",
+    "addressLocality": "Liverpool",
+    "addressRegion": "Nova Scotia",
+    "postalCode": "B0T1K0"
+  },
+  "telephone": "5196948879"
+}
+
+</script>
 </body>
 </html>

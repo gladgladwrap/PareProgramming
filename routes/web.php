@@ -18,7 +18,7 @@ Route::get('/services/{service}', 'ServicesController@show');
 
 
 
-Route::get('/service-requests', 'ServiceRequestController@index');
+Route::get('/service-requests', 'ServiceRequestController@index')->middleware('verified');
 
 
 Route::post('/service-requests', 'ServiceRequestController@store');
