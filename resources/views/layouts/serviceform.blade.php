@@ -1,11 +1,11 @@
+<div class="col-12" id="home-theme"></div>
+
 <form class="form-signin" method="POST" action="/service-requests">
 
   {{ csrf_field() }}
 
     <div class="text-center mb-4">
     
-       <div id="logo"></div>
-
       <h1 class="h3 mb-3 font-weight-normal">Get In Touch With Us!</h1>
       <p>See below for a list of services that we provide. Feel free to ask us for help with anything you may need!</p>
     </div>

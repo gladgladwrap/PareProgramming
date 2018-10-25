@@ -5,7 +5,7 @@
 			@guest
 				<div class="text-center mb-4">
     
-			      <div id="logo"></div>
+			      <div class="col-12" id="home-theme"></div>
 
 			      <h1 class="h3 mb-3 font-weight-normal">Get In Touch With Us!</h1>
 			      
