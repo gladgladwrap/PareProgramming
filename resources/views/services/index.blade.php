@@ -2,6 +2,16 @@
 
 @section('content')
 
+	@if ($flash = session('message'))
+
+		<div class="alert alert-success">
+			
+			{{ $flash }}
+
+		</div>
+
+	@endif
+
 			@guest
 				<div class="text-center mb-4">
     

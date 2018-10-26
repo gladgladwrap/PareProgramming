@@ -93,6 +93,7 @@ class ServiceRequestController extends Controller
 
     		]);
 
+        session()->flash('message', 'Your service request has been submitted. You can manage your service requests by clicking on the Service Requests link in the menu above.');
 
 
     	//Redirect to home page
