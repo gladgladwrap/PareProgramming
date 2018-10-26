@@ -21,7 +21,8 @@
 
             @endguest
 
-			
+			<h2 class="mt-4 text-center">Our Services</h2>
+
 			@foreach ($services as $service)
 	            
 	            <div class="card col-md-4 col-xs-6 mx-auto my-4">
@@ -32,5 +33,18 @@
 
 	        @endforeach
 
+
+			<div class="card text-center">
+
+				<div class="card-body">
+
+			        <h3 class="text-center">About Us</h3>
+					
+					<p>Pare Programming was the result of lackluster word play. Our mission is clear:</p>
+					<p><strong>pair programming is good.</strong></p>
+
+				</div>
+
+			</div>
     
 @endsection

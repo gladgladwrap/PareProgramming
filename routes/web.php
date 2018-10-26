@@ -42,6 +42,13 @@ Route::get('/service-requests/services/{service}', 'ServiceRequestController@ser
 
 
 
+Route::get('/sitemap', function(){
+
+	return view('sitemap');
+});
+
+
+
 
 
 
