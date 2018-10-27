@@ -2,15 +2,7 @@
 
 @section('content')
 
-	@if ($flash = session('message'))
-
-		<div class="alert alert-success">
-			
-			{{ $flash }}
-
-		</div>
-
-	@endif
+	@include('layouts.status-messages')
 
 			@guest
 				<div class="text-center mb-4">
@@ -27,7 +19,7 @@
 
 			@else
 
-            	@include ('layouts.serviceform')
+            	@include('layouts.serviceform')
 
             @endguest
 

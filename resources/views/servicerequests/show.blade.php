@@ -5,8 +5,31 @@
 	<div class="row flex-xl-nowrap">
 	
 		<div class="col-12 col-md-10 py-4 pl-md-5 bd-content text-center">
+
+			@include('layouts.status-messages')
 		
 			<h1 class="text-center py-2">Service Request {{ $servicerequest->id }}</h1>
+
+			<div class="control">
+
+				<a href="/service-requests/{{ $servicerequest->id }}/edit">Edit</a>
+
+			</div>
+
+			<form method="POST" action="/service-requests/{{ $servicerequest->id }}" class="button">
+			
+				{{  method_field('DELETE') }}
+
+				{{ csrf_field() }}
+
+				<div class="control">
+					
+					<button type="submit" class="button">Delete Request</button>
+
+				</div>
+
+			</form>
+
 
 			<table class="table">
 

@@ -51,6 +51,86 @@ class ServiceRequestController extends Controller
 
     }
 
+    public function store()
+    {   
+        $this->validate(request(), [
+            'service_id' => 'required',
+            'message' => 'required'
+        ]);
+
+    	ServiceRequest::create([
+
+    			'service_id' => request('service_id'),
+
+    			'message' => request('message'),
+
+                'user_id' => auth()->id()
+
+    		]);
+
+        session()->flash('message', 'Your service request has been submitted. You can manage your service requests by clicking on the Service Requests link in the menu above.');
+
+    	return redirect('/');
+    }
+
+
+    public function edit(ServiceRequest $servicerequest)
+    {
+
+        $servicerequest= ServiceRequest::find($servicerequest->id);
+
+        return view('servicerequests.edit', compact('servicerequest'));
+
+    }
+
+    public function update(ServiceRequest $servicerequest)
+    {
+        
+        $servicerequest = ServiceRequest::find($servicerequest->id);
+
+
+        $this->validate(request(), [
+            'service_id' => 'required',
+            'message' => 'required'
+        ]);
+
+
+        $servicerequest->service_id = request('service_id');
+
+        $servicerequest->message = request('message');
+
+        $servicerequest->save();
+
+        
+
+        session()->flash('message', 'Your service request has been editted.');
+
+        return redirect()->action(
+
+            'ServiceRequestController@show', ['id' => $servicerequest->id]
+
+        );
+
+    }
+
+
+
+    public function destroy(ServiceRequest $servicerequest)
+    {
+        
+        $servicerequest = ServiceRequest::find($servicerequest->id)->delete();
+
+        session()->flash('message', 'Your service request has been deleted.');
+
+        return redirect('/service-requests');
+
+    }
+
+
+
+
+
+
 
     public function filterByUser(User $user)
     {   
@@ -71,36 +151,6 @@ class ServiceRequestController extends Controller
     }
 
 
-
-    public function store()
-    {   
-
-        // Validate user input
-
-        $this->validate(request(), [
-            'service_id' => 'required',
-            'message' => 'required'
-        ]);
-
-    	ServiceRequest::create([
-
-
-    			'service_id' => request('service_id'),
-
-    			'message' => request('message'),
-
-                'user_id' => auth()->id()
-
-    		]);
-
-        session()->flash('message', 'Your service request has been submitted. You can manage your service requests by clicking on the Service Requests link in the menu above.');
-
-
-    	//Redirect to home page
-
-    	return redirect('/');
-
-    }
 
 
 }

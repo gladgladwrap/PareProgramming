@@ -18,6 +18,7 @@ Route::get('/services/{service}', 'ServicesController@show');
 
 
 
+
 Route::get('/service-requests', 'ServiceRequestController@index')->middleware('verified');
 
 
@@ -25,20 +26,30 @@ Route::post('/service-requests', 'ServiceRequestController@store');
 
 
 //restrict regular users to only be able to see their own requests.
-// if servicerequest->belongsTo->auth('user') then return the details of the service request
-// if the admin is viewing, then show the service request.
+// if servicerequest->belongsTo->auth('user') then return that service request
+// show service request to owner of the request and to admin. 
 
 Route::get('/service-requests/{servicerequest}', 'ServiceRequestController@show');
 
-//This is only to be used by an administator
-//A regular user will only be able to see their own requests
+Route::get('/service-requests/{servicerequest}/edit', 'ServiceRequestController@edit');
+
+Route::patch('/service-requests/{servicerequest}', 'ServiceRequestController@update');
+
+Route::delete('/service-requests/{servicerequest}', 'ServiceRequestController@destroy');
+
+
+//Admin can view requests by user
+//User can already see their requests in /service-requests
 
 Route::get('/service-requests/users/{user}', 'ServiceRequestController@filterByUser');
 
 
-//This is also only to be used by an admin
+//View requests for a specific service. 
+//Admin can see all requests
+///User can only see their requests
 
 Route::get('/service-requests/services/{service}', 'ServiceRequestController@services');
+
 
 
 
@@ -47,11 +58,5 @@ Route::get('/sitemap', function(){
 	return view('sitemap');
 });
 
-
-
-
-
-
-// This is already complete
 Auth::routes(['verify' => true]);
 

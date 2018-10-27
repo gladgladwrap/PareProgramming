@@ -6,7 +6,9 @@
 
 		<div class="col-12 col-md-10 py-4 pl-md-5 bd-content text-center">
 
-			<h1 class="py-2">View Service Requests</h1>
+			@include('layouts.status-messages')
+
+			<h1 class="py-2">Manage Service Requests</h1>
 
 			<p >Click on a Service Request ID in order to see the details of a particular service request.</p>
 
