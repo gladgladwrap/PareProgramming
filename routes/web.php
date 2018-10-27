@@ -24,19 +24,19 @@ Route::get('/service-requests', 'ServiceRequestController@index')->middleware('v
 Route::post('/service-requests', 'ServiceRequestController@store');
 
 
+//restrict regular users to only be able to see their own requests.
+// if servicerequest->belongsTo->auth('user') then return the details of the service request
+// if the admin is viewing, then show the service request.
+
 Route::get('/service-requests/{servicerequest}', 'ServiceRequestController@show');
 
-
-
-// Routes to be made
-
 //This is only to be used by an administator
-//A regular user should only be able to see their own service requests
+//A regular user will only be able to see their own requests
+
 Route::get('/service-requests/users/{user}', 'ServiceRequestController@filterByUser');
 
 
 //This is also only to be used by an admin
-// A regular user will only be able to see their specific requests, categorized by service
 
 Route::get('/service-requests/services/{service}', 'ServiceRequestController@services');
 
