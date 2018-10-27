@@ -44,12 +44,10 @@ class ServiceRequestController extends Controller
 
     public function show(ServiceRequest $servicerequest)
     {
-
-    	$servicerequest= ServiceRequest::find($servicerequest->id);
-
     	return view('servicerequests.show', compact('servicerequest'));
-
     }
+
+
 
     public function store()
     {   
@@ -59,13 +57,9 @@ class ServiceRequestController extends Controller
         ]);
 
     	ServiceRequest::create([
-
     			'service_id' => request('service_id'),
-
     			'message' => request('message'),
-
                 'user_id' => auth()->id()
-
     		]);
 
         session()->flash('message', 'Your service request has been submitted. You can manage your service requests by clicking on the Service Requests link in the menu above.');
@@ -76,18 +70,12 @@ class ServiceRequestController extends Controller
 
     public function edit(ServiceRequest $servicerequest)
     {
-
-        $servicerequest= ServiceRequest::find($servicerequest->id);
-
         return view('servicerequests.edit', compact('servicerequest'));
-
     }
+
 
     public function update(ServiceRequest $servicerequest)
     {
-        
-        $servicerequest = ServiceRequest::find($servicerequest->id);
-
 
         $this->validate(request(), [
             'service_id' => 'required',
@@ -96,11 +84,8 @@ class ServiceRequestController extends Controller
 
 
         $servicerequest->service_id = request('service_id');
-
         $servicerequest->message = request('message');
-
         $servicerequest->save();
-
         
 
         session()->flash('message', 'Your service request has been editted.');
@@ -118,15 +103,13 @@ class ServiceRequestController extends Controller
     public function destroy(ServiceRequest $servicerequest)
     {
         
-        $servicerequest = ServiceRequest::find($servicerequest->id)->delete();
+        $servicerequest->delete();
 
         session()->flash('message', 'Your service request has been deleted.');
 
         return redirect('/service-requests');
 
     }
-
-
 
 
 
