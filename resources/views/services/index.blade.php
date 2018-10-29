@@ -7,7 +7,7 @@
 			@guest
 				<div class="text-center mb-4">
     
-			      <div class="col-12" id="home-theme"></div>
+			      <div class="col-12 svg-bg" id="theme-home"></div>
 
 			      <h1 class="h3 mb-3 font-weight-normal">Get In Touch With Us!</h1>
 			      
@@ -22,6 +22,11 @@
             	@include('layouts.serviceform')
 
             @endguest
+
+
+
+
+            <div class="col-12 svg-bg" id="theme-services"></div>
 
 			<h2 class="mt-4 text-center">Our Services</h2>
 

@@ -10493,20 +10493,39 @@ a.text-dark:focus {
   min-height: 100%;
 }
 
-#home-theme {
-  height: 600px;
-  background: center no-repeat url("/svg/ComputerAndPears.svg");
-  margin: 0 auto;
-}
-
 #nav-logo {
   height: 100px;
   width: 50px;
   background: center no-repeat url("/svg/logo.svg");
 }
 
+.svg-bg {
+  height: 350px;
+  margin: 0 auto;
+}
+
+#theme-home {
+  background: center no-repeat url("/svg/ComputerAndPears.svg");
+}
+
+#theme-services {
+  background: center no-repeat url("/svg/Lobster.svg");
+}
+
 #service-bg {
   background: top/contain no-repeat url("/svg/WaterfallHangspace.svg");
   height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .svg-bg {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .svg-bg {
+    height: 600px;
+  }
 }
 
