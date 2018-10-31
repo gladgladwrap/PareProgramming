@@ -18,6 +18,15 @@ Route::get('/services/{service}', 'ServicesController@show');
 
 
 
+//Workflow page to give tips to others
+Route::get('/workflow', function() { return view('workflow.index'); });
+
+Route::get('/workflows/video-game-design', function() { return view('workflow.video-game-design'); });
+
+Route::get('/workflows/java-development', function() { return view('workflow.java-development'); });
+
+
+
 
 Route::get('/service-requests', 'ServiceRequestController@index')->middleware('verified');
 
@@ -40,14 +49,12 @@ Route::delete('/service-requests/{servicerequest}', 'ServiceRequestController@de
 
 //Admin can view requests by user
 //User can already see their requests in /service-requests
-
 Route::get('/service-requests/users/{user}', 'ServiceRequestController@filterByUser');
 
 
 //View requests for a specific service. 
 //Admin can see all requests
 ///User can only see their requests
-
 Route::get('/service-requests/services/{service}', 'ServiceRequestController@services');
 
 

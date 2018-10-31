@@ -53,5 +53,14 @@
 				</div>
 
 			</div>
+
+
+			<div class="text-center my-4 ">
+
+		        <h3 class="text-center"><a href="/workflow">Workflow Guides</a></h3>
+
+				<p>There are a lot of important steps involved in completing a project. Whether it may be for developing a website, a video game, or digital art, we encourage developers and designers to follow some sort of workflow. Following a structured work process will help improve efficiency and keep you on track. To help programmers and designers alike, we have provided a list of useful workflow procedures.</p>
+
+			</div>
     
 @endsection
