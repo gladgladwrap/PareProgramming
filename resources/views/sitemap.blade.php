@@ -14,6 +14,15 @@
 		<li>Tutoring</li>
 	</ul>
 
+	<h3>Workflow Guides</h3>
+	<ul>
+		<li>Video Game Design</li>
+		<li>Java Development</li>
+		<li>Systems Design</li>
+		<li>Scrum Procedure</li>
+		<li>Logo Creation</li>
+	</ul>
+
 	<h3>Registration</h3>
 	<ul>
 		<li>Login</li>
