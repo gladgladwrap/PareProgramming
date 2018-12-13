@@ -18,12 +18,17 @@ Route::get('/services/{service}', 'ServicesController@show');
 
 
 
-//Workflow page to give tips to others
+//Workflow page to provide guidelines all in one place
+
 Route::get('/workflow', function() { return view('workflow.index'); });
 
 Route::get('/workflows/video-game-design', function() { return view('workflow.video-game-design'); });
 
 Route::get('/workflows/java-development', function() { return view('workflow.java-development'); });
+
+Route::get('/workflows/systems-design', function() { return view('workflow.systems-design'); });
+
+Route::get('/workflows/scrum', function() { return view('workflow.scrum'); });
 
 
 
