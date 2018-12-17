@@ -8,9 +8,29 @@
 
 	<p><strong>Cohesion</strong>: A qualitative measure of the focus or unity of purpose within a single class. A highly cohesive class has consistency among its functions.</p>
 
+	<ol>
+		<li>Make use cases</li>
+		<li>Make Domain Model Class Diagram</li>
+		<li>Make first-cut Design Class Diagram. This includes only the problem domain classes.</li>
+		<li>Make Sequence Diagram</li>
+		<li>Refine Design Class Diagram by adding view layer, data access layer, and messages.</li>
+	</ol>
+
 	<p><strong>Coupling</strong>: A qualitative measure of how closely classes are related/linked.</p>
 
 	<p>The purpose of systems design is to balance the design principles of cohesion and coupling, class responsibility, indirection, and protection from variation.</p>
+
+	<p>Data access classes access the database.</p>
+	
+	<h3>Detailed Design</h3>
+
+	<p>Detailed design is to determine the objects and methods within classes used to support use cases. Detailed design is done for each use case separately. Use case realization is the process of taking each use case and determining all of the classes that collaborate with it.</p>
+
+	<h3>Utility Classes</h3>
+
+	<p>Entity Classes are the problem domain classes.</p>
+	<p>Boundary Classes are the view classes.</p>
+	<p>Control Classes (artifact objects) are needed to execute the use cases but aren't based on any domain model class.</p>
 
 	<h3 class="my-4">Sequence Diagrams</h3>
 
