@@ -10,10 +10,10 @@
 			      <div class="col-12 svg-bg" id="theme-home"></div>
 
 			      <h1 class="h3 mb-3 font-weight-normal">Get In Touch With Us!</h1>
-			      
-			      <p>See below for a list of services that we provide.</p>
 
 			      <p>You must <a href="/login">sign in</a> before you can make a service request!</p>
+			      
+			      <p>See below for a list of services that we provide.</p>
 
 			    </div>
 

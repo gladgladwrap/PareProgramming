@@ -6,8 +6,6 @@
 
 	<h2 class="my-4">The Process of Systems Design</h2>
 
-	<p><strong>Cohesion</strong>: A qualitative measure of the focus or unity of purpose within a single class. A highly cohesive class has consistency among its functions.</p>
-
 	<ol>
 		<li>Make use cases</li>
 		<li>Make Domain Model Class Diagram</li>
@@ -15,6 +13,8 @@
 		<li>Make Sequence Diagram</li>
 		<li>Refine Design Class Diagram by adding view layer, data access layer, and messages.</li>
 	</ol>
+
+	<p><strong>Cohesion</strong>: A qualitative measure of the focus or unity of purpose within a single class. A highly cohesive class has consistency among its functions.</p>
 
 	<p><strong>Coupling</strong>: A qualitative measure of how closely classes are related/linked.</p>
 
