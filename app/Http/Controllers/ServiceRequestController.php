@@ -33,6 +33,8 @@ class ServiceRequestController extends Controller
         $servicerequests = ServiceRequest::latest()
         
         ->filter(request(['month', 'year']))
+
+        ->where('user_id', auth()->user()->id)
         
         ->get();
 
