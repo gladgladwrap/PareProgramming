@@ -1,4 +1,4 @@
-<div class="col-12" id="home-theme"></div>
+<div class="col-12 svg-bg" id="theme-home"></div>
 
 <form class="form-signin" method="POST" action="/service-requests">
 

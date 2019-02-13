@@ -1,10 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+	
+	<h1 class="my-4">Systems Analysis</h1>
+	
+	<p>Systems Analysis enable a person to understand and specify what a new system should accomplish.</p>
 
-	<h1 class="my-4">Systems Design</h1>
+	<h3 class="my-4">The Core Processes of the Software Development Life Cycle</h3>
 
-	<h2 class="my-4">The Process of Systems Design</h2>
+	<ol>
+		<li>Identify the problem or need. Obtain approval.</li>
+		<li>Plan and monitor the project.</li>
+		<li>Discover and understand the details of the problem.</li>
+		<li>Design the system components that solve the problem.</li>
+		<li>Build, test, and integrate.</li>
+		<li>Complete tests and deploy.</li>
+	</ol>
+
+	<h2 class="my-4">Systems Design</h2>
+
+	<p>Systems Design enable a person to describe in detail the system that solves the business need.</p>
+
+	<h3 class="my-4">The Process of Systems Design</h3>
 
 	<ol>
 		<li>Make use cases</li>
@@ -14,13 +31,13 @@
 		<li>Refine Design Class Diagram by adding view layer, data access layer, and messages.</li>
 	</ol>
 
-	<p><strong>Cohesion</strong>: A qualitative measure of the focus or unity of purpose within a single class. A highly cohesive class has consistency among its functions.</p>
-
-	<p><strong>Coupling</strong>: A qualitative measure of how closely classes are related/linked.</p>
-
 	<p>The purpose of systems design is to balance the design principles of cohesion and coupling, class responsibility, indirection, and protection from variation.</p>
 
 	<p>Data access classes access the database.</p>
+
+	<h3>Determining System Events</h3>
+
+	<p>To decide what the system is going to do, we must determine the events that will require the system to respond. The types of events that can occur within a system are external events, temporal events, and state events. External events are caused by an outside actor supplying or receiving information. Temporal events occur as a result of reaching a point in time. State events are triggered as a result of something happening inside the system.</p>
 	
 	<h3>Detailed Design</h3>
 
@@ -50,6 +67,10 @@
 	<h3 class="my-4">Design Patterns</h3>
 
 	<p>Design Patters are well-tested solutions to common problems and issues encountered in software development. They are best practices for how objects and classes should be arranged to accomplish a result. They become well known because of the Gang of Four. Their book detailed 23 design patters, which were split into three groups.</p>
+
+	<p><strong>Cohesion</strong>: A qualitative measure of the focus or unity of purpose within a single class. A highly cohesive class has consistency among its functions.</p>
+
+	<p><strong>Coupling</strong>: A qualitative measure of how closely classes are related/linked.</p>
 
 	<ol>
 		<li>Creational Patterns: patterns that deal with the creation of objects. These include:

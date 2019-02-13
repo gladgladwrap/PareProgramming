@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\ServiceRequest;
 
 use App\User;
@@ -12,6 +14,7 @@ use App\Service;
 
 use Carbon\Carbon;
 
+use Illuminate\Support\Facades\Gate;
 
 class ServiceRequestController extends Controller
 {
@@ -34,10 +37,9 @@ class ServiceRequestController extends Controller
         
         ->filter(request(['month', 'year']))
 
-        ->where('user_id', auth()->user()->id)
+        ->where('user_id', Auth::id())
         
         ->get();
-
 
     	return view('servicerequests.index', compact('servicerequests'));
 
@@ -46,7 +48,13 @@ class ServiceRequestController extends Controller
 
     public function show(ServiceRequest $servicerequest)
     {
-    	return view('servicerequests.show', compact('servicerequest'));
+        if (Gate::allows('service-requests.view', $servicerequest)) 
+        {
+            return view('servicerequests.show', compact('servicerequest'));
+        }
+        else {
+            return view('servicerequests.rejection');
+        }
     }
 
 
